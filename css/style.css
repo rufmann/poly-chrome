@@ -1,0 +1,20 @@
+body{
+    background-color: #20b47c;
+}
+
+.font-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    margin: 0px;
+}
+
+.text-body {
+    font-size: larger;
+    text-align: center;
+    font-family: "Galada";
+    color: #2b5c49;
+    box-shadow: #1e4133;
+}
