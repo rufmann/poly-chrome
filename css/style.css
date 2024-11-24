@@ -1,25 +1,164 @@
-html {
-    font-size: larger;
-    text-align: center;
-    font-family: "Lobster";
-    color: #2b5c49;
-    box-shadow: #1e4133;
+/* @font-face {
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(https://design.penpot.app/fonts/sourcesanspro-regular.woff) format('woff');
+  } */
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  min-width: 100%;
+  padding: 0;
 }
 
-body{
-    margin-top: 20vh;
-    background-color: #20b47c;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
 }
 
-.font-logo {
-    max-width: 100%;
-    height: auto;
+* {
+  box-sizing: border-box;
 }
 
-.logo {
-    margin: 50px;
+.text-node { background-clip: text !important; -webkit-background-clip: text !important; }
+
+/* Board */
+.board-52de3d33e782 {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: #FFFFFF;
+  overflow: hidden;
+  z-index: 0;
 }
 
-.copyright {
-    text-align: center;
+/* navbar */
+.navbar-52e064093b29 {
+  position: absolute;
+  left: 1400px;
+  top: 60px;
+  width: 421px;
+  height: 36px;
+}
+
+/* Contact Us */
+.contact-us-52e02ff13933 {
+  position: absolute;
+  left: 284px;
+  top: 0px;
+  width: 137px;
+  height: 36px;
+}
+.contact-us-52e02ff13933 .root-0 {
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.contact-us-52e02ff13933 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.contact-us-52e02ff13933 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.contact-us-52e02ff13933 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(0, 0, 0, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 20px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Lobster";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Plans and Pricing */
+.plans-and-52df9e69657a {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 218px;
+  height: 36px;
+}
+.plans-and-52df9e69657a .root-0 {
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.plans-and-52df9e69657a .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.plans-and-52df9e69657a .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.plans-and-52df9e69657a .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(0, 0, 0, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 20px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Lobster";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* polychrome-logo */
+.polychrome-52de733c8c44, img {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 531px;
+  height: 170px;
+  /* background: no-repeat center center / cover; */
+  border-radius: 0px;
+}
+
+/* hero-video-container */
+.herovideo-52de4d51f19d {
+  position: absolute;
+  left: 0px;
+  top: 200px;
+  width: 100%;
+  height: 600px;
+  background: black;
+  border-radius: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-video {
+  width: 100%;
 }
