@@ -1,8 +1,15 @@
 /* General Reset */
+
+@font-face {
+  font-family: 'Trends';
+  src: url('../fonts/Trends/Trends.ttf') format('truetype');
+}
+
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Trends';
+  font-size: 15px;
   overflow-x: hidden;
   color: #333333;
   background-color: #f7f7f7; /* Light neutral background */
