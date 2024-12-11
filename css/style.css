@@ -237,26 +237,22 @@ body, html {
   position: relative;
   max-width: 27rem;
   margin: 0 auto;
-}
-
-.slider-wrapper2 {
-  position: relative;
-  max-width: 27rem;
-  margin: 0 auto;
+  height: 700px;
 }
 
 .slider {
   display: flex;
-  aspect-ratio: 9/16;
+  flex-direction: column;
   overflow: hidden;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
+  height: 100%;
 }
 
 .slider img {
-  width: 100px;
+  width: 100%;
   height: auto;
   flex: 1 0 100%;
   scroll-snap-align: start;
