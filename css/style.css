@@ -11,7 +11,7 @@ body, html {
   font-family: 'Trends';
   font-size: 15px;
   overflow-x: hidden;
-  color: #333333;
+  color: #252525;
   background-color: #20b47c; /* Light neutral background */
 }
 
@@ -103,16 +103,34 @@ footer {
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
-  margin: 0 0 20px;
+  font-size: 4rem;
+  margin: 0 0 70px;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: #ffffff;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  font-weight: 700;
 }
 
 .cta-button {
   text-decoration: none;
   padding: 15px 30px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff4081; /* Pink for fun CTA */
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.see-plans {
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 15px 30px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #ffffff;
   background-color: #ff4081; /* Pink for fun CTA */
@@ -124,7 +142,13 @@ footer {
 }
 
 .cta-button:hover {
-  background-color: #e03570; /* Slightly darker pink */
+  background-color: coral; /* Slightly darker pink */
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.see-plans:hover {
+  background-color: coral; /* Slightly darker pink */
   transform: scale(1.1);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
@@ -153,6 +177,7 @@ footer {
   font-size: 3rem;
   color: #ffffff;
   margin-bottom: 50px;
+  text-transform: uppercase;
 }
 
 .services-grid {
@@ -215,20 +240,25 @@ footer {
   transform: rotateY(180deg); /* Rotate the back of the card */
 }
 
+.service-card-back p {
+  color: #333333;
+  font-weight: bold;
+}
+
 .service-icon img {
-  width: 50px; /* Adjusted size */
-  height: 50px; /* Adjusted size */
+  width: 100px; /* Adjusted size */
+  height: 100px; /* Adjusted size */
   margin-bottom: 10px; /* Adjusted spacing */
 }
 
 .service-card h3 {
-  font-size: 1.2rem; /* Adjusted font size */
+  font-size: 1.3rem; /* Adjusted font size */
   color: #333333;
   margin-bottom: 10px;
 }
 
 .service-card p {
-  font-size: 0.9rem; /* Adjusted font size for better readability */
+  font-size: 1rem; /* Adjusted font size for better readability */
   font-weight: 700;
   color: #333333;
   line-height: 1.4;
@@ -242,9 +272,9 @@ footer {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  /* max-width: 700px; */
-  margin: 0 auto;
+  gap: 100px;
+  max-width: 1150px;
+  margin: 20px auto;
 }
 
 .slider-wrapper {
@@ -306,18 +336,19 @@ footer {
 
 /* Pricing Section */
 .pricing-section {
-  background-color: #f9f9f9;
+  background-color: #ececec;
   text-align: center;
 }
 
 .container-pricing {
-  padding: 1rem;
+  padding: 1rem 1rem 4rem;
 }
 
 .pricing-section h2 {
   font-size: 3rem;
   color: #333333;
   margin: 2rem;
+  text-transform: uppercase;
 }
 
 .pricing-table {
@@ -333,7 +364,7 @@ footer {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 2rem;
+  padding: 5rem;
   max-width: 300px;
   height: 450px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -346,7 +377,7 @@ footer {
 }
 
 .pricing-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -386,19 +417,50 @@ footer {
   transform: scale(1.05);
 }
 
+/* Extra Features Section */
 .packages-extra-section {
-  padding: 1rem 5rem;
-  background-color: #ffffff;
+  padding: 3rem 1rem;
+  /* background-color: #ffffff; */
+  text-align: center;
+  /* border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd; */
 }
 
-.packages-extra-section h2 {
-  font-size: 3rem;
-  color: #333333;
-  margin-bottom: 2rem;
+.package-inclusive h2 {
+  font-size: 2.5rem;
+  /* color: #20b47c; */
+  margin-bottom: -2rem;
+  text-transform: uppercase; /* Optional: For a bolder style */
 }
 
-.package-inclusive ul li{
-  
-  font-size: 25px;
-  padding: 10px;
+.package-list {
+  list-style: none;
+  padding: 50px;
+  margin: 0 auto;
+  /* max-width: auto; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+.package-list li {
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.package-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+  margin: 20px;
 }
