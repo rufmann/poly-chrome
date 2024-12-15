@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hero-section">
+    <h1>Book Your Package</h1>
+  </header>
+
+  <section class="form-section">
+    <div class="container">
+      <h2>Fill in your details</h2>
+      <form id="booking-form" action="submit-form.php" method="post">
+        <!-- Full Name -->
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <!-- Phone -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <!-- Plan Dropdown -->
+        <label for="plan">Select a Plan:</label>
+        <select id="plan" name="plan" required>
+          <option value="bronze">Bronze</option>
+          <option value="silver">Silver</option>
+          <option value="gold">Gold</option>
+        </select>
+
+        <!-- Additional Message -->
+        <label for="message">Additional Message:</label>
+        <textarea id="message" name="message" placeholder="Enter any additional details here"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit" class="cta-button">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>SlideHustlers &copy; All Copyright Reserved</p>
+  </footer>
+</body>
+</html>
