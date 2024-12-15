@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to PolyChrome!</title>
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="script/script.js"></script>
 </head>
 <body>
   <header class="hero-section">
@@ -16,7 +17,10 @@
     <!-- Navbar -->
     <nav class="navbar">
       <!-- <a href="#pricing">Pricing or Plans</a> -->
-      <a href="#contact">Contact Us</a>
+      <a href="https://wa.me/+60148391507?text=Hello,%20PolyChrome!%20I%20want%20my%20photobooth" class="whatsapp" target="_blank">
+        <i class="whatsapp-icon"></i>
+        <span>+6014-8391507</span>
+      </a>
     </nav>
 
     <!-- Background Video -->
@@ -26,11 +30,10 @@
         Your browser does not support the video tag.
       </video>
     </div>
-
     <!-- CTA Content -->
     <div class="hero-content">
       <h1>Capture Moments, Create Memories</h1>
-      <a href="#pricing" class="cta-button">Book Now</a>
+      <button class="cta-button" onclick="redirectToForm('bronze')">Book Now</button>
       <a href="#pricing" class="see-plans">Plans & Pricing</a>
     </div>
   </header>
@@ -158,7 +161,7 @@
             <li>Basic Props & Backdrop</li>
             <li>Basic Guestbook</li>
           </ul>
-          <button class="select-button" style="margin-top: 5rem;" id="bronze">Select Plan</button>
+          <button class="select-button" style="margin-top: 5rem;" id="bronze" onclick="redirectToForm('bronze')">Select Plan</button>
         </div>
         <!-- Silver -->
         <div class="pricing-card">
@@ -172,7 +175,7 @@
             <li>Premium Guestbook</li>
             <li>Softcopies via Google Drive</li>
           </ul>
-          <button class="select-button" style="margin-top: 3.7rem;" id="silver">Select Plan</button>
+          <button class="select-button" style="margin-top: 3.7rem;" id="silver" onclick="redirectToForm('silver')">Select Plan</button>
         </div>
         <!-- Gold -->
         <div class="pricing-card">
@@ -187,7 +190,7 @@
             <li><b>FREE Thumbdrive</b> with Softcopies</li>
             <li><b>FREE Gifts<b></li>
           </ul>
-          <button class="select-button" style="margin-top: 2rem;" id="gold">Select Plan</button>
+          <button class="select-button" style="margin-top: 2rem;" id="gold" onclick="redirectToForm('gold')">Select Plan</button>
         </div>
       </div>
     </div>

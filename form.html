@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Booking Form</title>
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="script/script.js"></script>
 </head>
 <body>
-  <header class="hero-section">
+  <header class="form-header">
     <h1>Book Your Package</h1>
+    <a href="https://wa.me/+60148391507?text=Hello,%20PolyChrome!%20I%20want%20my%20photobooth" class="form-whatsapp" target="_blank">
+      <i class="whatsapp-icon"></i>
+      <span>+6014-8391507</span>
+    </a>
   </header>
-
   <section class="form-section">
     <div class="container">
       <h2>Fill in your details</h2>
@@ -30,9 +34,9 @@
         <!-- Plan Dropdown -->
         <label for="plan">Select a Plan:</label>
         <select id="plan" name="plan" required>
-          <option value="bronze">Bronze</option>
-          <option value="silver">Silver</option>
-          <option value="gold">Gold</option>
+          <option value="bronze">Bronze (RM899)</option>
+          <option value="silver">Silver (RM1299)</option>
+          <option value="gold">Gold (RM1499)</option>
         </select>
 
         <!-- Additional Message -->
@@ -40,7 +44,7 @@
         <textarea id="message" name="message" placeholder="Enter any additional details here"></textarea>
 
         <!-- Submit Button -->
-        <button type="submit" class="cta-button">Book Now</button>
+        <button type="submit" class="submit-button">Book Now</button>
       </form>
     </div>
   </section>
