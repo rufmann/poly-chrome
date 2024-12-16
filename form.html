@@ -9,11 +9,36 @@
 </head>
 <body>
   <header class="form-header">
-    <h1>Book Your Package</h1>
-    <a href="https://wa.me/+60148391507?text=Hello,%20PolyChrome!%20I%20want%20my%20photobooth" class="form-whatsapp" target="_blank">
-      <i class="whatsapp-icon"></i>
-      <span>+6014-8391507</span>
-    </a>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/PolyChrome-font.png" alt="Brand Logo">
+      </a>
+    </div>
+    <!-- Social Media Navbar -->
+    <nav class="social-navbar">
+      <ul class="social-links">
+        <li>
+          <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-link">
+            <i class="social-icon whatsapp-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/yourpage" target="_blank" class="facebook-link">
+            <i class="social-icon facebook-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/yourprofile" target="_blank" class="instagram-link">
+            <i class="social-icon instagram-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://tiktok.com/@yourprofile" target="_blank" class="tiktok-link">
+            <i class="social-icon tiktok-icon"></i>
+          </a>
+        </li>
+      </ul>
+      </nav>
   </header>
   <section class="form-section">
     <div class="container">
@@ -38,6 +63,14 @@
           <option value="silver">Silver (RM1299)</option>
           <option value="gold">Gold (RM1499)</option>
         </select>
+        
+        <!-- Event Type -->
+        <label for="event-type">Event Type:</label>
+        <input type="text" id="event-type" name="event-type" placeholder="Enter event type" required>
+
+        <!-- Event Date -->
+        <label for="event-date">Event Date:</label>
+        <input type="date" id="event-date" name="event_date" required>
 
         <!-- Additional Message -->
         <label for="message">Additional Message:</label>
