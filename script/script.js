@@ -112,26 +112,30 @@ function formatWhatsAppMessage(formData) {
 
   const message = `🎉 *New Booking Request*
 
-👤 *Customer Details*
-Name: ${formData.fullName}
-Email: ${formData.email}
-Phone: ${formData.phone}
+  👤 *Customer Details*
+  Name: ${formData.fullName}
+  Email: ${formData.email}
+  Phone: ${formData.phone}
 
-📸 *Event Details*
-Event Type: ${formData.eventType}
-Date: ${formattedDate}
-Selected Package: ${formData.plan.toUpperCase()} (${planPrices[formData.plan]})
+  📸 *Event Details*
+  Event Type: ${formData.eventType}
+  Date: ${formattedDate}
+  Selected Package: ${formData.plan.toUpperCase()} (${planPrices[formData.plan]})
 
-💬 *Additional Message*
-${formData.message || "No additional message provided"}
+  💬 *Additional Message*
+  ${formData.message || "No additional message provided"}
 
-Thank you for choosing PolyChrome! We'll get back to you soon.`;
+  Thank you for choosing PolyChrome! We'll get back to you soon.`;
 
   return encodeURIComponent(message);
 }
 
 function handleFormSubmit(event) {
   event.preventDefault();
+
+  const dialog = document.getElementById('success-dialog');
+  const redirectButton = document.getElementById('redirect-button');
+  const formSection =  document.querySelector('.form-section');
 
   const formData = {
     fullName: document.getElementById('full-name').value,
@@ -144,10 +148,27 @@ function handleFormSubmit(event) {
   };
 
   const whatsappMessage = formatWhatsAppMessage(formData);
-  const phoneNumber = '+60136281382'; // Replace with your actual WhatsApp number
+  const phoneNumber = '+60136281382';
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
   
   window.open(whatsappURL, '_blank');
+
+  // show success dialog
+  dialog.classList.remove('hidden')
+
+  // add blur and dim effect
+  formSection.classList.add('dimmed');
+  document.body.insertAdjacentHTML('beforeend', '<div class="dim-overlay active"></div>');
+
+  redirectButton.addEventListener('click', () => {
+    // remove blur and dim effect
+    formSection.classList.remove('dimmed');
+    const dimOverlay = document.querySelector('dim-overlay');
+    if (dimOverlay) dimOverlay.remove();
+
+    // redirect to homepage
+    window.location.href = 'index.html'
+  });
 }
 
 // ============ Navigation Functions ============
@@ -182,4 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
     preselectPlan();
     bookingForm.addEventListener('submit', handleFormSubmit);
   }
+
+
 });
