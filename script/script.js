@@ -148,7 +148,7 @@ function handleFormSubmit(event) {
   };
 
   const whatsappMessage = formatWhatsAppMessage(formData);
-  const phoneNumber = '+60136281382';
+  const phoneNumber = '+60148391507';
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
   
   window.open(whatsappURL, '_blank');
