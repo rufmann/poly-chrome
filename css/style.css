@@ -780,16 +780,20 @@ input[type="date"]:focus {
 
 /* Mobile-friendly Pricing Section */
 @media (max-width: 768px) {
+  .pricing-section {
+    align-content: center;
+  }
+
   .pricing-table {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 0 0 1.7rem;
   }
 
   .pricing-card {
-    flex: 0 0 auto;
+    /* flex: 0 0 auto; */
     height: 500px;
     width: 230px;
-    scroll-snap-align: start;
     margin-right: 20px;
   }
 
@@ -797,15 +801,10 @@ input[type="date"]:focus {
   .pricing-table::-webkit-scrollbar {
     display: none;
   }
-  
-  .pricing-table {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
 
   .container-pricing {
-    width: 50%;
-    margin-left: 6.7rem;
+    /* width: 50%; */
+    /* margin-left: 6.7rem; */
     padding-bottom: 0;
   }  
 }
