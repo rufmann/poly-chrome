@@ -331,7 +331,7 @@ button {
 
 .slideshow {
   position: relative;
-  width: 300px;
+  width: 250px;
   height: 700px; 
   overflow: hidden;
   background-color: #eaeaea;
@@ -424,7 +424,7 @@ button {
 }
 
 .container-pricing {
-  padding: 1rem 1rem 4rem;
+  padding: 1rem;
 }
 
 .pricing-section h2 {
@@ -432,7 +432,7 @@ button {
   color: #333333;
   margin: 2rem;
   text-transform: uppercase;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  /* text-shadow: 3px 3px 5px rgba(116, 78, 37, 0.3) ; */
 }
 
 .pricing-table {
@@ -443,9 +443,12 @@ button {
 }
 
 .pricing-card {
-  flex: 1 1 calc(33.33% - 30px); /* Each card takes one-third of the row with gap included */
-  max-width: 300px; /* Prevent cards from stretching too wide */
-  background-color: #9bffb9;
+  flex: 1 1 calc(33.33% - 30px); 
+  max-width: 300px;
+  background-color: #defad89d;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #239166;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -471,15 +474,16 @@ button {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-.pricing-card h3 {
-  font-size: 1.8rem;
+.pricing-card .package {
+  margin: 0;
+  font-size: 70px;
   color: #20b47c;
   margin-bottom: 1rem;
 }
 
 .pricing-card .price {
   font-size: 2.5rem;
-  color: #333333;
+  color: #66303b;
   margin: 1rem 0;
   /* font-weight: bold; */
 }
@@ -507,6 +511,36 @@ button {
   background-color: #17a678;
   color: #dcfcdb;
   transform: scale(1.05);
+}
+
+/* Upgrades Section */
+.upgrades h2 {
+  font-size: 2.5rem;
+  /* color: #20b47c; */
+  /* margin-bottom: -2rem; */
+  text-transform: uppercase; 
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.upgrades-list {
+  justify-content: center;
+  list-style: none;
+  padding: 0 50px 0;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+}
+
+
+.upgrades-list li {
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 /* Extra Features Section */
@@ -792,9 +826,16 @@ input[type="date"]:focus {
 
   .pricing-card {
     /* flex: 0 0 auto; */
-    height: 500px;
+    height: 400px;
     width: 230px;
     margin-right: 20px;
+  }
+
+  .pricing-card .package {
+    margin: 0;
+    font-size: 54px;
+    text-anchor: middle;
+    text-align: center;
   }
 
   /* Hide scrollbar but keep functionality */
@@ -806,7 +847,8 @@ input[type="date"]:focus {
     /* width: 50%; */
     /* margin-left: 6.7rem; */
     padding-bottom: 0;
-  }  
+  }
+  
 }
 
 /* Mobile-friendly Package Inclusive Section */
@@ -895,7 +937,7 @@ input[type="date"]:focus {
 
   .package-inclusive h2 {
     margin-bottom: 0;
-    margin-top: 0px;
+    margin-top: 20px;
   }
 
   .services-section h2,
